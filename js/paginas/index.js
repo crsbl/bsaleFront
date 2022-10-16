@@ -1,10 +1,8 @@
 import buscarProducto from "../acciones/buscarProductos/index.js";
 let paginaActual = 0;
-  let filtroActual = "Todo";
-  let ordenActual = "Nombre";
+let filtroActual = "Todo";
+let ordenActual = "Nombre";
 export default (cantidadDatos) => {
-  
-
   let cantidadPaginas = null;
   const contenedorPaginas = document.getElementById("contenedorPaginas");
   contenedorPaginas.innerHTML = "";
@@ -39,7 +37,6 @@ export default (cantidadDatos) => {
       parseInt(ordenActual),
       paginaActual
     );
-
   };
 
   for (let i = 0; i < cantidadPaginas; i++) {
@@ -53,5 +50,5 @@ export default (cantidadDatos) => {
     buttonCambiarPagina.addEventListener("click", cambiarPagina);
     contenedorPaginas.appendChild(buttonCambiarPagina);
   }
-  paginaActual= 0;
+  paginaActual = 0;
 };

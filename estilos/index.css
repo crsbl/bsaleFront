@@ -2,7 +2,7 @@ body {
   width: 100%;
   align-items: center;
   gap: 1rem;
-background-color: rgb(192, 175, 161);
+  background-color: rgb(192, 175, 161);
 }
 body::-webkit-scrollbar {
   height: 0;
@@ -26,9 +26,9 @@ body::-webkit-scrollbar-thumb {
 main {
   justify-content: center;
   gap: 0.5rem;
-   border-top:solid .1rem rgb(173, 157, 127);
-   border-bottom:solid .1rem rgb(173, 157, 127);
-width: 100%;
-background-color: #ffffff;
-padding: .5rem 0 .5rem 0;
+  border-top: solid 0.1rem rgb(173, 157, 127);
+  border-bottom: solid 0.1rem rgb(173, 157, 127);
+  width: 100%;
+  background-color: #ebe0b7;
+  padding: 0.5rem 0 0.5rem 0;
 }

@@ -1,8 +1,8 @@
 .divContenedorProductos {
     width: 55rem;
-    min-height: 25rem;
- /* background-color: rgb(202, 207, 207); */
-  
+   min-height: 25rem;
+background-repeat: no-repeat;
+  background-image: url('../../img/estante.svg');
  padding: .5rem 0 .5rem 0;
   justify-content: space-around;
   align-items: center;
@@ -10,7 +10,7 @@
   }
   
   .divContenedorProducto > img{
-    border-radius: .2rem ;
+    border-radius: .5rem ;
     width:10rem;
     height: 10rem;
   }
@@ -20,6 +20,7 @@ margin:.3rem 0  0 0;
 width: 100%;
 max-width: 10rem;
 height: 3.3rem;
+background-color: rgb(230, 207, 207);
 color:rgb(103, 103, 155);
 
 text-align: center;

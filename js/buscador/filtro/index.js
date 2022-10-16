@@ -1,17 +1,15 @@
 import peticionFech from "../../peticiones/index.js";
 
 export default (textoFiltro) => {
-  
   let estadoFiltro = false;
+
+  //interacciones con el filtro
   const filtro = (e) => {
-
-
-
     const containerDatosOpciones = document.getElementById(
       "containerOpcionesFiltro"
     );
     const inpFiltro = document.getElementById("inputFiltro");
-  
+
     switch (estadoFiltro) {
       case false:
         containerDatosOpciones.style.display = "block";
@@ -19,21 +17,25 @@ export default (textoFiltro) => {
         break;
 
       case true:
-        if(e.target.id ==="inputFiltro"){return}
+        if (e.target.id === "inputFiltro") {
+          return;
+        }
         console.log("aqqq", e.target.innerText);
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
         inpFiltro.value = e.target.innerText;
-        inpFiltro.setAttribute("name",`nameInputFiltro${e.target.id.slice(14)}`);
-        textoFiltro =e.target.innerText;
+        inpFiltro.setAttribute(
+          "name",
+          `nameInputFiltro${e.target.id.slice(14)}`
+        );
+        textoFiltro = e.target.innerText;
         console.log(e);
-     
+
         break;
 
       default:
         break;
     }
- 
   };
 
   document.getElementById("inputFiltro").addEventListener("click", filtro);
@@ -41,15 +43,15 @@ export default (textoFiltro) => {
     .getElementById("h4opcionFiltroTodo")
     .addEventListener("click", filtro);
 
+  //funcion rellenar filtro
   const cargarFiltros = async () => {
-
-   
     const containerOpcionesFiltro = document.getElementById(
       "containerOpcionesFiltro"
     );
-    const datosOpcion = await peticionFech("http://localhost:3001/filtroDatos","GET");
-
-
+    const datosOpcion = await peticionFech(
+      "http://localhost:3001/filtroDatos",
+      "GET"
+    );
 
     datosOpcion
       .map((datosOpcion) => {
@@ -63,5 +65,4 @@ export default (textoFiltro) => {
   };
 
   cargarFiltros();
-
 };

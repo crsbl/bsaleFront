@@ -1,10 +1,12 @@
 .divContenedorBuscador00 {
-  width: 14rem;
-height:100%;
+  width: 17rem;
+height:50rem;
 padding: 0 0 1rem 0;
 border-radius: .2rem;
-  background-color: rgb(145, 151, 160);
-  border: solid .1rem rgb(93, 142, 161);
+background-image: url('../../img/vaso.svg');
+ background-repeat: no-repeat; 
+/*   background-color: rgb(145, 151, 160);
+  border: solid .1rem rgb(93, 142, 161); */
 }
 .divContenedorBuscador01 {
   align-items: center;
@@ -25,7 +27,7 @@ border-radius: .2rem;
 
 .divContenedorBuscador01 > h4 {
   padding: 0.5rem;
-  color: rgb(219, 223, 222);
+  color: rgb(189, 206, 202);
   font-weight: 800;
   font-size: 1.2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

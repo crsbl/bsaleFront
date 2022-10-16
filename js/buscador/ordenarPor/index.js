@@ -1,6 +1,7 @@
 export default (textoOrdenarPor) => {
   let estadoOrdenarPor = false;
 
+  //funcion interaccion boton ordenar por
   const ordenarPor = (e) => {
     const containerDatosOpcionesOrdenarPor = document.getElementById(
       "containerOpcionesOrdenarPor"
@@ -14,30 +15,34 @@ export default (textoOrdenarPor) => {
         break;
 
       case true:
-        if(e.target.id ==="inputOrdenarPor"){return}
+        if (e.target.id === "inputOrdenarPor") {
+          return;
+        }
         containerDatosOpcionesOrdenarPor.style.display = "none";
         estadoOrdenarPor = false;
         inpOrdenarPor.value = e.target.innerText;
-        textoOrdenarPor= e.target.innerText;
-        inpOrdenarPor.setAttribute("name",`nameInputOrdenarPor${e.target.id.slice(18)}`);
+        textoOrdenarPor = e.target.innerText;
+        inpOrdenarPor.setAttribute(
+          "name",
+          `nameInputOrdenarPor${e.target.id.slice(18)}`
+        );
         break;
 
       default:
         break;
     }
-
-    console.log("datosOpcion");
   };
 
   document
     .getElementById("inputOrdenarPor")
     .addEventListener("click", ordenarPor);
 
+  //agregando opciones ordenar por
   const cargarOrdenarPor = () => {
     const opcionesOrdenarPor = [
-      {id:0, name: "Nombre" },
-      {id:1, name: "Menor Precio" },
-      {id:2, name: "Mayor Precio" },
+      { id: 0, name: "Nombre" },
+      { id: 1, name: "Menor Precio" },
+      { id: 2, name: "Mayor Precio" },
     ];
 
     const containerOpcionesOrdenarPor = document.getElementById(
@@ -53,7 +58,10 @@ export default (textoOrdenarPor) => {
         );
         H4OpcionesOrdenarPor.innerText = datosOpcion.name;
         H4OpcionesOrdenarPor.addEventListener("click", ordenarPor);
-        H4OpcionesOrdenarPor.setAttribute("id", `h4opcionOrdenarPor${datosOpcion.id}`);
+        H4OpcionesOrdenarPor.setAttribute(
+          "id",
+          `h4opcionOrdenarPor${datosOpcion.id}`
+        );
         containerOpcionesOrdenarPor.appendChild(H4OpcionesOrdenarPor);
       })
       .join("");
