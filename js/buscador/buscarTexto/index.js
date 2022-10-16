@@ -6,7 +6,7 @@ export default (textofiltro, ordenPor, textoBuscar) => {
 
 
 
-
+//funcion agregada al input para buscar con enter
   const changeBuscar = (e) => {
     textoBuscar = e.target.value;
     buscarProducto(e.target.value, textofiltro, ordenPor, 0);
