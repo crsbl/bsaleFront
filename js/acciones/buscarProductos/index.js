@@ -20,17 +20,14 @@ export default async (textoBuscar, textofiltror, ordenPort, paginaActual) => {
   } else {
     filtro = textofiltro.name.slice(15);
   }
-
-  console.log(paginaActual);
   const datos = await peticion(
-    "http://localhost:3001/buscarProducto",
+    "https://bsaleback-production.up.railway.app/buscarProducto",
     "POST",
     textoBuscar,
     filtro,
     parseInt(ordenarPor),
     paginaActual
   );
-  console.log(datos);
   contenedorProductos.innerHTML = "";
   datos[0]
     .map((datos) => {

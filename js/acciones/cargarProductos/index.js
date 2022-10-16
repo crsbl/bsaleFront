@@ -8,7 +8,7 @@ export default async (textoBuscar, textofiltro, ordenPor) => {
 
   contenedorProductos.innerHTML = "";
 
-  let datos = await peticion("http://localhost:3001/productosDatos", "GET");
+  let datos = await peticion("https://bsaleback-production.up.railway.app/productosDatos", "GET");
   datos[0]
     .map((datos) => {
       contenedorProductos.innerHTML += `<div id='contenedorProducto' class='divContenedorProducto flexColumn'>

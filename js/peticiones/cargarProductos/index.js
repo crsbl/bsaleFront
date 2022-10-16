@@ -4,7 +4,7 @@ import cargarPaginas from '../../paginas/index.js';
 export default async () => {
   const contenedorProductos = document.getElementById("contenedorProductos");
   contenedorProductos.innerHTML = '';
-  const res = await fetch("http://localhost:5000/productosDatos");
+  const res = await fetch("https://bsaleback-production.up.railway.app/productosDatos");
   const datos = JSON.parse(await res.text());
 
   datos[0]

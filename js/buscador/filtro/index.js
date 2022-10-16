@@ -20,7 +20,6 @@ export default (textoFiltro) => {
         if (e.target.id === "inputFiltro") {
           return;
         }
-        console.log("aqqq", e.target.innerText);
         containerDatosOpciones.style.display = "none";
         estadoFiltro = false;
         inpFiltro.value = e.target.innerText;
@@ -29,7 +28,6 @@ export default (textoFiltro) => {
           `nameInputFiltro${e.target.id.slice(14)}`
         );
         textoFiltro = e.target.innerText;
-        console.log(e);
 
         break;
 
@@ -49,7 +47,7 @@ export default (textoFiltro) => {
       "containerOpcionesFiltro"
     );
     const datosOpcion = await peticionFech(
-      "http://localhost:3001/filtroDatos",
+      "https://bsaleback-production.up.railway.app/filtroDatos",
       "GET"
     );
 

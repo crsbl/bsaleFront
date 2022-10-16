@@ -29,8 +29,6 @@ export default (cantidadDatos) => {
     } else {
       filtroActual = textofiltro.name.slice(15);
     }
-
-    console.log(filtroActual, ordenActual, paginaActual);
     buscarProducto(
       textobuscar.value,
       filtroActual,
