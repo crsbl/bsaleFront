@@ -47,7 +47,7 @@ export default (textoFiltro) => {
       "containerOpcionesFiltro"
     );
     const datosOpcion = await peticionFech(
-      "https://bsaleback-production.up.railway.app/filtroDatos",
+      "https://bsaleback12.herokuapp.com/filtroDatos",
       "GET"
     );
 

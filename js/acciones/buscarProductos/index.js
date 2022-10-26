@@ -1,6 +1,10 @@
 import peticion from "../../peticiones/index.js";
 import paginas from "../../paginas/index.js";
 
+
+ //Esta funcion renderiza la busqueda
+  //textoBuscar - cadena de texto - texto de busqueda
+  //paginaActual - numerico - numero de paginacion
 export default async (textoBuscar, textofiltror, ordenPort, paginaActual) => {
   const contenedorProductos = document.getElementById("contenedorProductos");
  
@@ -21,7 +25,7 @@ export default async (textoBuscar, textofiltror, ordenPort, paginaActual) => {
     filtro = textofiltro.name.slice(15);
   }
   const datos = await peticion(
-    "https://bsaleback-production.up.railway.app/buscarProducto",
+    "https://bsaleback12.herokuapp.com/buscarProducto",
     "POST",
     textoBuscar,
     filtro,

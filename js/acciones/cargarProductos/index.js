@@ -2,13 +2,17 @@ import peticion from "../../peticiones/index.js";
 import paginas from "../../paginas/index.js";
 
 
-//carga los productos y la paginacion con las variables del estado inicial
+
+  //esta funcion carga los productos iniciales
+  //textofiltro - cadena de exto - filtro seleccionado
+  //ordenPor - cadena de texto - orden seleccionado
+  //textoBuscar - cadena de texto - texto de busqueda
 export default async (textoBuscar, textofiltro, ordenPor) => {
   const contenedorProductos = document.getElementById("contenedorProductos");
 
   contenedorProductos.innerHTML = "";
 
-  let datos = await peticion("https://bsaleback-production.up.railway.app/productosDatos", "GET");
+  let datos = await peticion("https://bsaleback12.herokuapp.com/productosDatos", "GET");
   datos[0]
     .map((datos) => {
       contenedorProductos.innerHTML += `<div id='contenedorProducto' class='divContenedorProducto flexColumn'>

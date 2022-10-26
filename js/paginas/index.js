@@ -2,6 +2,9 @@ import buscarProducto from "../acciones/buscarProductos/index.js";
 let paginaActual = 0;
 let filtroActual = "Todo";
 let ordenActual = "Nombre";
+
+//Esta funcion renderiza la paginacion
+//cantidadDatos - numerico - cantidad de resultados
 export default (cantidadDatos) => {
   let cantidadPaginas = null;
   const contenedorPaginas = document.getElementById("contenedorPaginas");
@@ -12,6 +15,7 @@ export default (cantidadDatos) => {
     cantidadPaginas = Math.trunc(cantidadDatos / 8) + 1;
   }
 
+  // esta funcion cambia la pagina y vuelve a cargar los productos
   const cambiarPagina = (e) => {
     let textobuscar = document.getElementById("inputBuscarProducto");
     let textofiltro = document.getElementById("inputFiltro");

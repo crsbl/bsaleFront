@@ -5,17 +5,29 @@ import filtro from "./buscador/filtro/index.js";
 
 const App = () => {
   //valores iniciales
-    let textofiltro = "Todo",
+  let textofiltro = "Todo",
     ordenPor = "Nombre",
     textoBuscar = "";
 
-  buscarProducto(textofiltro, ordenPor,textoBuscar);
+  //Esta funcion agrega la funcionalidad de buscar
+  //textofiltro - cadena de exto - filtro seleccionado
+  //ordenPor - cadena de texto - orden seleccionado
+  //textoBuscar - cadena de texto - texto de busqueda
+  buscarProducto(textofiltro, ordenPor, textoBuscar);
 
-  //funciones iniciales con interacción en ordenar por y filtro
-  cargarProductos( textoBuscar, textofiltro, ordenPor);
+  //esta funcion carga los productos iniciales
+  //textofiltro - cadena de exto - filtro seleccionado
+  //ordenPor - cadena de texto - orden seleccionado
+  //textoBuscar - cadena de texto - texto de busqueda
+  cargarProductos(textoBuscar, textofiltro, ordenPor);
+
+  //esta funcion inicia los ordenar por 
+  //ordenPor - cadena de texto - orden seleccionado
   ordenarPor(ordenPor);
-  filtro(textofiltro);
 
+  //esta funcion inicia los filtros 
+  //ordenPor - cadena de texto - orden seleccionado
+  filtro(textofiltro);
 };
 
 App();
